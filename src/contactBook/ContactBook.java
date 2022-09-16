@@ -92,5 +92,19 @@ public class ContactBook {
     public Contact next() {
         return contacts[currentContact++];
     }
-
+    
+    public Contact getContact(int number){
+        Contact c = null;
+        int i = 0;
+        boolean found = false;
+        while(i< counter && !found) {
+           if (contacts[i].getPhone() == number) {
+               c = contacts[i];
+               found = true;
+           } else {
+               i++;
+           }
+       }
+        return c;
+    }
 }
