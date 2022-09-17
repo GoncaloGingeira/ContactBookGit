@@ -107,4 +107,26 @@ public class ContactBook {
        }
         return c;
     }
+
+    public boolean hasEqualPhoneNumbers(){
+
+        boolean toReturn = false;
+
+        //for each contact
+        for(int i = 0 ; i < counter && !toReturn; i++){
+
+            //compares it with all the contacts ahead of it
+            for(int u = i + 1; u < counter && !toReturn; u++){
+
+                //will return if true
+                toReturn = contacts[i].getPhone() == contacts[u].getPhone();
+
+            }
+
+        }
+
+        return toReturn;
+
+    }
+
 }
